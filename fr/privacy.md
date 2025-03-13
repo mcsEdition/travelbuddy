@@ -4,8 +4,6 @@ title: Politique de Confidentialité
 lang: fr
 ---
 
-<div class="content-section">
-
 # Politique de Confidentialité
 
 *Dernière mise à jour : 1 mars 2025*
@@ -153,5 +151,3 @@ Si vous avez des questions ou des préoccupations concernant cette politique de 
 
 - Email : privacy@travelbuddy-app.com
 - Adresse postale : TravelBuddy Privacy Team, 123 Travel Street, San Francisco, CA 94103, USA
-
-</div>

@@ -45,10 +45,22 @@
                             {% if lang == page.lang %}
                                 <span class="active">{{ lang | upcase }}</span>
                             {% else %}
+                                {% assign page_name = page.url | split: '/' | last %}
+                                {% if page_name == '' %}
+                                    {% assign page_name = 'index' %}
+                                {% endif %}
                                 {% if lang == site.default_lang %}
-                                    <a href="{{ site.baseurl }}{{ page.url | remove_first: page.lang | remove_first: '/' }}">{{ lang | upcase }}</a>
+                                    {% if page_name == 'index' %}
+                                        <a href="{{ site.baseurl }}/">{{ lang | upcase }}</a>
+                                    {% else %}
+                                        <a href="{{ site.baseurl }}/{{ page_name }}">{{ lang | upcase }}</a>
+                                    {% endif %}
                                 {% else %}
-                                    <a href="{{ site.baseurl }}/{{ lang }}/{{ page.url | remove_first: page.lang | remove_first: '/' | split: '/' | last }}">{{ lang | upcase }}</a>
+                                    {% if page_name == 'index' %}
+                                        <a href="{{ site.baseurl }}/{{ lang }}/">{{ lang | upcase }}</a>
+                                    {% else %}
+                                        <a href="{{ site.baseurl }}/{{ lang }}/{{ page_name }}">{{ lang | upcase }}</a>
+                                    {% endif %}
                                 {% endif %}
                             {% endif %}
                             {% unless forloop.last %} / {% endunless %}

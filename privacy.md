@@ -4,8 +4,6 @@ title: Privacy Policy
 lang: en
 ---
 
-<div class="content-section">
-
 # Privacy Policy
 
 *Last Updated: March 1, 2025*
@@ -153,5 +151,3 @@ If you have questions or concerns about this Privacy Policy or our practices, pl
 
 - Email: privacy@travelbuddy-app.com
 - Mail: TravelBuddy Privacy Team, 123 Travel Street, San Francisco, CA 94103, USA
-
-</div>
