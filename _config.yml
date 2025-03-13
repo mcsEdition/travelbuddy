@@ -1,6 +1,6 @@
 title: TravelBuddy
 description: "Connect with fellow travelers on the same journey"
-logo: "{{ site.baseurl }}/assets/images/logo-origin.png"
+logo: /travelbuddy/assets/images/logo-origin.png
 email: support@travelbuddy-app.com
 show_downloads: false
 google_analytics:
