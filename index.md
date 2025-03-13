@@ -43,27 +43,27 @@ lang: en
   </div>
 </div>
 
-<div class="feature-section" style="background-color: #f8f8f8;">
+<div class="feature-section light-bg">
   <div class="container">
     <h2>How It Works</h2>
     <div class="features">
       <div class="feature-card">
         <div class="feature-icon">
-          <i class="fas fa-1"></i>
+          <span class="number-icon">1</span>
         </div>
         <h3>Add Your Flights</h3>
         <p>Input your flight details or itinerary into the app. TravelBuddy supports multi-segment flights and connections.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
-          <i class="fas fa-2"></i>
+          <span class="number-icon">2</span>
         </div>
         <h3>Discover Matches</h3>
         <p>The app automatically finds travelers with matching flights or connections. Review potential buddies and their profiles.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
-          <i class="fas fa-3"></i>
+          <span class="number-icon">3</span>
         </div>
         <h3>Connect and Travel Together</h3>
         <p>Send requests to connect, chat within the app, and meet up during your journey for a more enjoyable travel experience.</p>
