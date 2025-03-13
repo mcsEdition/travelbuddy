@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: site.default_lang | default: "en" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    {% if site.google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="page-header">
+            <div class="container">
+                <div class="header-content">
+                    <a href="{{ site.baseurl }}/" class="logo">
+                        <img src="{{ site.logo }}" alt="{{ site.title }}" height="80">
+                    </a>
+                    <nav class="main-nav">
+                        <ul>
+                            {% assign nav = site.nav[page.lang] %}
+                            <li><a href="{{ site.baseurl }}/{% if page.lang != site.default_lang %}{{ page.lang }}/{% endif %}">{{ nav.home }}</a></li>
+                            <li><a href="{{ site.baseurl }}/{% if page.lang != site.default_lang %}{{ page.lang }}/{% endif %}community">{{ nav.community }}</a></li>
+                            <li><a href="{{ site.baseurl }}/{% if page.lang != site.default_lang %}{{ page.lang }}/{% endif %}privacy">{{ nav.privacy }}</a></li>
+                            <li><a href="{{ site.baseurl }}/{% if page.lang != site.default_lang %}{{ page.lang }}/{% endif %}legal">{{ nav.legal }}</a></li>
+                            <li><a href="{{ site.baseurl }}/{% if page.lang != site.default_lang %}{{ page.lang }}/{% endif %}help">{{ nav.help }}</a></li>
+                            <li><a href="{{ site.baseurl }}/{% if page.lang != site.default_lang %}{{ page.lang }}/{% endif %}contact">{{ nav.contact }}</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="language-selector">
+                        {% for lang in site.languages %}
+                            {% if lang == page.lang %}
+                                <span class="active">{{ lang | upcase }}</span>
+                            {% else %}
+                                {% if lang == site.default_lang %}
+                                    <a href="{{ site.baseurl }}{{ page.url | remove: page.lang | remove: '/' }}">{{ lang | upcase }}</a>
+                                {% else %}
+                                    <a href="{{ site.baseurl }}/{{ lang }}{{ page.url | remove: page.lang | remove: '/' }}">{{ lang | upcase }}</a>
+                                {% endif %}
+                            {% endif %}
+                            {% unless forloop.last %} / {% endunless %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="container">
+                {% if page.title %}
+                <h1 class="page-title">{{ page.title }}</h1>
+                {% endif %}
+                
+                {{ content }}
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img src="{{ site.logo }}" alt="{{ site.title }}" height="50">
+                        <p>© {{ site.time | date: '%Y' }} {{ site.title }}</p>
+                    </div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="{{ site.baseurl }}/{% if page.lang != site.default_lang %}{{ page.lang }}/{% endif %}privacy">{{ nav.privacy }}</a></li>
+                            <li><a href="{{ site.baseurl }}/{% if page.lang != site.default_lang %}{{ page.lang }}/{% endif %}legal">{{ nav.legal }}</a></li>
+                            <li><a href="{{ site.baseurl }}/{% if page.lang != site.default_lang %}{{ page.lang }}/{% endif %}help">{{ nav.help }}</a></li>
+                            <li><a href="{{ site.baseurl }}/{% if page.lang != site.default_lang %}{{ page.lang }}/{% endif %}contact">{{ nav.contact }}</a></li>
+                        </ul>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="app-links">
+                    <a href="#" class="app-btn">
+                        <i class="fab fa-apple"></i>
+                        <span>Download on the<br><strong>App Store</strong></span>
+                    </a>
+                    <a href="#" class="app-btn">
+                        <i class="fab fa-google-play"></i>
+                        <span>Get it on<br><strong>Google Play</strong></span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
