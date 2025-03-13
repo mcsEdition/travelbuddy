@@ -52,17 +52,17 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 5px 0; // Reduced from 10px to 5px
   }
   
   .logo {
     display: block;
-    max-width: 240px;
+    max-width: 200px; // Reduced from 240px
     
     img {
       display: block;
       height: auto;
-      max-height: 60px;
+      max-height: 40px; // Reduced from 60px
       width: auto;
     }
   }
@@ -77,13 +77,13 @@ a {
     padding: 0;
     
     li {
-      margin: 0 15px;
+      margin: 0 10px; // Reduced from 15px
       
       a {
         color: $primary-color;
         font-weight: 600;
         letter-spacing: 0.2px;
-        font-size: 14px;
+        font-size: 13px; // Reduced from 14px
         
         &:hover {
           color: $accent-color;
@@ -94,8 +94,9 @@ a {
 }
 
 .language-selector {
-  margin-left: 20px;
+  margin-left: 15px; // Reduced from 20px
   font-weight: 500;
+  font-size: 13px; // Added to reduce size
   
   a {
     color: $light-text;
@@ -407,7 +408,7 @@ a {
   background: none;
   border: none;
   color: #2D3250;
-  font-size: 24px;
+  font-size: 20px; // Reduced from 24px
   cursor: pointer;
   padding: 5px;
 }
@@ -415,15 +416,15 @@ a {
 // Responsive
 @media (max-width: 768px) {
   .page-header .header-content {
-    flex-direction: row; // Changé de column à row pour le layout mobile
+    flex-direction: row;
     position: relative;
     
     .logo {
-      max-width: 180px; // Logo plus petit sur mobile
-      margin-bottom: 0; // Supprimé le margin-bottom
+      max-width: 160px; // Further reduced for mobile
+      margin-bottom: 0;
       
       img {
-        max-height: 50px;
+        max-height: 35px; // Further reduced for mobile
       }
     }
   }
@@ -457,22 +458,23 @@ a {
       flex-direction: column;
       flex-wrap: nowrap;
       justify-content: flex-start;
-      padding: 10px 20px;
+      padding: 5px 15px; // Reduced padding
       
       li {
-        margin: 8px 0;
+        margin: 5px 0; // Reduced vertical margins
         width: 100%;
         
         a {
           display: block;
-          padding: 8px 0;
+          padding: 6px 0; // Reduced padding
         }
       }
     }
   }
   
   .language-selector {
-    margin: 15px 0 15px auto; // Aligné à droite
+    margin: 10px 0 10px auto; // Reduced margin
+    font-size: 12px; // Smaller font for mobile
   }
   
   .site-footer .footer-content {
