@@ -1,6 +1,4 @@
----
----
-
+/* Importation du thème Jekyll */
 @import "{{ site.theme }}";
 
 // Variables
@@ -175,22 +173,34 @@ a {
 }
 
 // Footer
+// Footer réduit et optimisé
 .site-footer {
   background-color: $primary-color;
   color: #fff;
-  padding: 40px 0;
+  padding: 30px 0; // Réduit de 40px à 30px
   
   .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 30px;
+    margin-bottom: 20px; // Réduit de 30px à 20px
+    flex-wrap: wrap; // Permet un meilleur comportement responsive
+    
+    > div {
+      margin-bottom: 15px; // Espacement plus petit quand ils s'empilent
+    }
   }
   
   .footer-logo {
+    max-width: 200px; // Limite la taille du logo
+    
+    img {
+      max-height: 40px; // Limite la hauteur du logo
+    }
+    
     p {
-      margin-top: 10px;
-      font-size: 0.9rem;
+      margin-top: 8px; // Réduit de 10px à 8px
+      font-size: 0.85rem; // Légèrement plus petit
       opacity: 0.8;
     }
   }
@@ -202,11 +212,12 @@ a {
       margin: 0;
       
       li {
-        margin-bottom: 10px;
+        margin-bottom: 8px; // Réduit de 10px à 8px
         
         a {
           color: #fff;
           opacity: 0.8;
+          font-size: 0.9rem; // Taille de police légèrement réduite
           
           &:hover {
             opacity: 1;
@@ -219,14 +230,14 @@ a {
   .social-links {
     a {
       display: inline-block;
-      width: 36px;
-      height: 36px;
-      margin-right: 10px;
+      width: 32px; // Réduit de 36px à 32px
+      height: 32px; // Réduit de 36px à 32px
+      margin-right: 8px; // Réduit de 10px à 8px
       color: #fff;
       background-color: rgba(255, 255, 255, 0.1);
       border-radius: 50%;
       text-align: center;
-      line-height: 36px;
+      line-height: 32px; // Ajusté pour correspondre à la nouvelle hauteur
       
       &:hover {
         background-color: rgba(255, 255, 255, 0.2);
@@ -237,33 +248,88 @@ a {
   .app-links {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 12px; // Réduit de 15px à 12px
+    margin-top: 10px; // Ajouté pour l'espacement
     
     .app-btn {
       display: flex;
       align-items: center;
       background-color: #000;
       color: #fff;
-      padding: 8px 15px;
+      padding: 6px 12px; // Réduit de 8px 15px à 6px 12px
       border-radius: 5px;
       
       i {
-        font-size: 1.5rem;
-        margin-right: 8px;
+        font-size: 1.3rem; // Réduit de 1.5rem à 1.3rem
+        margin-right: 6px; // Réduit de 8px à 6px
       }
       
       span {
-        font-size: 0.7rem;
+        font-size: 0.65rem; // Réduit de 0.7rem à 0.65rem
         line-height: 1.2;
         
         strong {
-          font-size: 0.9rem;
+          font-size: 0.85rem; // Réduit de 0.9rem à 0.85rem
         }
       }
       
       &:hover {
         background-color: #333;
         color: #fff;
+      }
+    }
+  }
+  
+  // Responsive optimisé pour un meilleur affichage sur mobile
+  @media (max-width: 768px) {
+    padding: 25px 0; // Encore plus petit sur mobile
+    
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 15px;
+      
+      > div {
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    
+    .footer-logo {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+      li {
+        margin: 0 10px 8px 10px;
+      }
+    }
+    
+    .social-links {
+      margin: 5px 0;
+    }
+    
+    .app-links {
+      flex-direction: row; // Garder les boutons côte à côte si possible
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .app-links {
+      flex-direction: column;
+      align-items: center;
+      
+      .app-btn {
+        width: 200px;
+        justify-content: center;
       }
     }
   }
