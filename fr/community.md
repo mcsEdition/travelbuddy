@@ -4,8 +4,6 @@ title: Directives de la Communauté
 lang: fr
 ---
 
-<div class="content-section">
-
 ## Nos Valeurs Communautaires
 
 Chez TravelBuddy, nous construisons plus qu'une simple application—nous créons une communauté mondiale de voyageurs qui partagent des trajets et créent des souvenirs ensemble. Notre communauté est fondée sur les valeurs fondamentales suivantes :
@@ -71,5 +69,3 @@ TravelBuddy emploie une combinaison de systèmes automatisés et de modérateurs
 * Collaborer avec les forces de l'ordre si nécessaire
 
 Notre objectif est de favoriser un environnement positif où les voyageurs peuvent se connecter en toute sécurité et de manière significative. En suivant ces directives, vous nous aidez à créer une communauté où chacun peut vivre des expériences de voyage extraordinaires.
-
-</div>
