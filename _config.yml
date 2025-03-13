@@ -4,9 +4,11 @@ logo: /travelbuddy/assets/images/logo-origin.png
 email: support@travelbuddy-app.com
 show_downloads: false
 google_analytics:
-remote_theme: pages-themes/cayman@v0.2.0
+# Supprimez ou commentez cette ligne:
+# remote_theme: pages-themes/cayman@v0.2.0
 plugins:
-  - jekyll-remote-theme
+  # Supprimez ou commentez cette ligne:
+  # - jekyll-remote-theme 
   - jekyll-sitemap
 
 # Multilingual settings
