@@ -4,8 +4,6 @@ title: Community Guidelines
 lang: en
 ---
 
-<div class="content-section">
-
 ## Our Community Values
 
 At TravelBuddy, we're building more than just an app—we're creating a global community of travelers who share journeys and create memories together. Our community is built on the following core values:
@@ -71,5 +69,3 @@ TravelBuddy employs a combination of automated systems and human moderators to e
 * Working with law enforcement when necessary
 
 Our aim is to foster a positive environment where travelers can connect safely and meaningfully. By following these guidelines, you help us create a community where everyone can have amazing travel experiences.
-
-</div>
