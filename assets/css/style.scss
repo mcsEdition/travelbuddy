@@ -41,27 +41,57 @@ a {
 
 // Header
 .page-header {
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  
-  .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 0;
-  }
-  
-  .logo {
-    display: block;
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03); // Ombre plus subtile
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(45, 50, 80, 0.08); // Légère bordure en bas pour délimiter
     
-    img {
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0; // Réduire légèrement le padding
+    }
+    
+    .logo {
       display: block;
+      max-width: 240px; // Limiter la largeur du logo
+      
+      img {
+        display: block;
+        height: auto;
+        max-height: 60px; // Hauteur maximale pour le logo
+        width: auto;
+      }
     }
   }
-}
+  
+  // Navigation avec des couleurs assorties au logo
+  .main-nav {
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      
+      li {
+        margin: 0 15px;
+        
+        a {
+          color: #2D3250; // Couleur assortie au logo bleu foncé
+          font-weight: 600; // Un peu plus épais pour mieux ressortir
+          letter-spacing: 0.2px; // Espacement des lettres pour la lisibilité
+          font-size: 14px; // Taille légèrement ajustée
+          
+          &:hover {
+            color: #424b79; // Légèrement plus clair au survol
+          }
+        }
+      }
+    }
+  }
 
 // Navigation
 .main-nav {
