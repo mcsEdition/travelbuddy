@@ -46,9 +46,9 @@
                                 <span class="active">{{ lang | upcase }}</span>
                             {% else %}
                                 {% if lang == site.default_lang %}
-                                    <a href="{{ site.baseurl }}{{ page.url | remove: page.lang | remove: '/' }}">{{ lang | upcase }}</a>
+                                    <a href="{{ site.baseurl }}{{ page.url | remove_first: page.lang | remove_first: '/' }}">{{ lang | upcase }}</a>
                                 {% else %}
-                                    <a href="{{ site.baseurl }}/{{ lang }}{{ page.url | remove: page.lang | remove: '/' }}">{{ lang | upcase }}</a>
+                                    <a href="{{ site.baseurl }}/{{ lang }}/{{ page.url | remove_first: page.lang | remove_first: '/' | split: '/' | last }}">{{ lang | upcase }}</a>
                                 {% endif %}
                             {% endif %}
                             {% unless forloop.last %} / {% endunless %}
