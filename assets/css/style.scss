@@ -78,13 +78,15 @@ a {
   .project-name, .project-tagline {
     display: none !important;
   }
-  
-  .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 0;
-  }
+}
+
+// Structure du header améliorée
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  position: relative;
   
   .logo {
     display: block;
@@ -97,15 +99,24 @@ a {
       width: auto;
     }
   }
+  
+  .nav-and-lang {
+    display: flex;
+    align-items: center;
+  }
 }
 
 // Navigation
 .main-nav {
+  flex-grow: 1;
+  margin: 0 20px;
+  
   ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
+    justify-content: center;
     
     li {
       margin: 0 10px;
@@ -124,10 +135,11 @@ a {
   }
 }
 
+// Sélecteur de langue
 .language-selector {
-  margin-left: 15px;
   font-weight: 500;
   font-size: 13px;
+  margin-right: 10px;
   
   a {
     color: $light-text;
@@ -141,6 +153,17 @@ a {
     color: $primary-color;
     font-weight: 600;
   }
+}
+
+// Bouton menu mobile
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: $primary-color;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
 }
 
 // Main content
@@ -175,7 +198,6 @@ a {
 }
 
 // Footer
-// Footer réduit et optimisé
 .site-footer {
   background-color: $primary-color;
   color: #fff;
@@ -278,60 +300,6 @@ a {
       &:hover {
         background-color: #333;
         color: #fff;
-      }
-    }
-  }
-  
-  // Responsive optimisé pour un meilleur affichage sur mobile
-  @media (max-width: 768px) {
-    padding: 25px 0; // Encore plus petit sur mobile
-    
-    .footer-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 15px;
-      
-      > div {
-        margin-bottom: 15px;
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-    
-    .footer-logo {
-      margin-bottom: 10px;
-    }
-    
-    .footer-links ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      
-      li {
-        margin: 0 10px 8px 10px;
-      }
-    }
-    
-    .social-links {
-      margin: 5px 0;
-    }
-    
-    .app-links {
-      flex-direction: row; // Garder les boutons côte à côte si possible
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .app-links {
-      flex-direction: column;
-      align-items: center;
-      
-      .app-btn {
-        width: 200px;
-        justify-content: center;
       }
     }
   }
@@ -916,81 +884,73 @@ iframe, video, audio {
   display: block;
 }
 
-// Hamburger menu pour mobile
-.mobile-menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: #2D3250;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 5px;
-}
-
 // Responsive
 @media (max-width: 768px) {
-  .page-header .header-content {
-    flex-direction: row;
-    position: relative;
-    
+  .header-content {
     .logo {
       max-width: 160px;
-      margin-bottom: 0;
       
       img {
         max-height: 35px;
       }
     }
-  }
-  
-  .mobile-menu-toggle {
-    display: block;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .main-nav {
-    display: block;
-    width: 100%;
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    z-index: 1000;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     
-    &.active {
-      height: auto;
-    }
-    
-    ul {
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      padding: 5px 15px;
+    .main-nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
       
-      li {
-        margin: 5px 0;
-        width: 100%;
+      &.active {
+        display: block;
+      }
+      
+      ul {
+        flex-direction: column;
+        padding: 10px 0;
         
-        a {
-          display: block;
-          padding: 6px 0;
+        li {
+          margin: 0;
+          width: 100%;
+          text-align: center;
+          
+          a {
+            display: block;
+            padding: 10px 0;
+            
+            &:hover {
+              background-color: rgba($accent-color, 0.05);
+            }
+          }
         }
       }
     }
+    
+    .nav-and-lang {
+      display: flex;
+      align-items: center;
+    }
+    
+    .mobile-menu-toggle {
+      display: block;
+      margin-left: 10px;
+      color: $primary-color;
+      font-size: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+    }
+    
+    .language-selector {
+      font-size: 12px;
+    }
   }
-  
-  .language-selector {
-    margin: 10px 0 10px auto;
-    font-size: 12px;
-  }
-  
+
   .site-footer .footer-content {
     flex-direction: column;
     align-items: center;

@@ -3,29 +3,24 @@ document.addEventListener('DOMContentLoaded', function() {
   const mainNav = document.querySelector('.main-nav');
   
   if (menuToggle && mainNav) {
-    menuToggle.addEventListener('click', function() {
-      if (mainNav.classList.contains('active')) {
-        mainNav.style.height = '0';
-        setTimeout(() => {
-          mainNav.classList.remove('active');
-        }, 300);
-      } else {
-        mainNav.classList.add('active');
-        const navHeight = mainNav.scrollHeight;
-        mainNav.style.height = navHeight + 'px';
+    // Gérer le clic sur le menu burger
+    menuToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mainNav.classList.toggle('active');
+    });
+    
+    // Fermer le menu si on clique ailleurs
+    document.addEventListener('click', function(e) {
+      if (mainNav.classList.contains('active') && 
+          !mainNav.contains(e.target) && 
+          e.target !== menuToggle) {
+        mainNav.classList.remove('active');
       }
     });
+    
+    // Empêcher que les clics à l'intérieur du menu ne le ferment
+    mainNav.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
   }
-  
-  // Close menu when clicking outside
-  document.addEventListener('click', function(event) {
-    if (mainNav.classList.contains('active') && 
-        !mainNav.contains(event.target) && 
-        event.target !== menuToggle) {
-      mainNav.style.height = '0';
-      setTimeout(() => {
-        mainNav.classList.remove('active');
-      }, 300);
-    }
-  });
 });

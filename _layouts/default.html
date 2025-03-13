@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     {% if site.google_analytics %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
@@ -25,9 +25,7 @@
                     <a href="{{ site.baseurl }}/" class="logo">
                         <img src="{{ site.logo }}" alt="{{ site.title }}">
                     </a>
-                    <button class="mobile-menu-toggle">
-                        <i class="fas fa-bars"></i>
-                    </button>
+                    
                     <nav class="main-nav">
                         <ul>
                             {% assign nav = site.nav[page.lang] %}
@@ -40,31 +38,37 @@
                         </ul>
                     </nav>
                     
-                    <div class="language-selector">
-                        {% for lang in site.languages %}
-                            {% if lang == page.lang %}
-                                <span class="active">{{ lang | upcase }}</span>
-                            {% else %}
-                                {% assign page_name = page.url | split: '/' | last %}
-                                {% if page_name == '' %}
-                                    {% assign page_name = 'index' %}
-                                {% endif %}
-                                {% if lang == site.default_lang %}
-                                    {% if page_name == 'index' %}
-                                        <a href="{{ site.baseurl }}/">{{ lang | upcase }}</a>
-                                    {% else %}
-                                        <a href="{{ site.baseurl }}/{{ page_name }}">{{ lang | upcase }}</a>
-                                    {% endif %}
+                    <div class="nav-and-lang">
+                        <div class="language-selector">
+                            {% for lang in site.languages %}
+                                {% if lang == page.lang %}
+                                    <span class="active">{{ lang | upcase }}</span>
                                 {% else %}
-                                    {% if page_name == 'index' %}
-                                        <a href="{{ site.baseurl }}/{{ lang }}/">{{ lang | upcase }}</a>
+                                    {% assign page_name = page.url | split: '/' | last %}
+                                    {% if page_name == '' %}
+                                        {% assign page_name = 'index' %}
+                                    {% endif %}
+                                    {% if lang == site.default_lang %}
+                                        {% if page_name == 'index' %}
+                                            <a href="{{ site.baseurl }}/">{{ lang | upcase }}</a>
+                                        {% else %}
+                                            <a href="{{ site.baseurl }}/{{ page_name }}">{{ lang | upcase }}</a>
+                                        {% endif %}
                                     {% else %}
-                                        <a href="{{ site.baseurl }}/{{ lang }}/{{ page_name }}">{{ lang | upcase }}</a>
+                                        {% if page_name == 'index' %}
+                                            <a href="{{ site.baseurl }}/{{ lang }}/">{{ lang | upcase }}</a>
+                                        {% else %}
+                                            <a href="{{ site.baseurl }}/{{ lang }}/{{ page_name }}">{{ lang | upcase }}</a>
+                                        {% endif %}
                                     {% endif %}
                                 {% endif %}
-                            {% endif %}
-                            {% unless forloop.last %} / {% endunless %}
-                        {% endfor %}
+                                {% unless forloop.last %} / {% endunless %}
+                            {% endfor %}
+                        </div>
+                        
+                        <button class="mobile-menu-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
                     </div>
                 </div>
             </div>
