@@ -8,6 +8,7 @@ $primary-color: #2D3250;
 $secondary-color: #f8f8f8;
 $accent-color: #7077A1;
 $text-color: #333;
+$light-text: #666; /* <-- cette variable manquait */
 $light-text: #666;
 $link-color: #2D3250;
 $border-color: #e5e5e5;
@@ -110,6 +111,51 @@ a {
     font-weight: 600;
   }
 }
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+
+    h1, h2, h3, h4 {
+        color: $primary-color;
+        margin-top: 1.5em;
+        margin-bottom: 0.75em;
+        font-weight: 600;
+    }
+
+    p {
+        margin-bottom: 1em;
+        line-height: 1.7;
+        color: $text-color;
+    }
+
+    ul, ol {
+        margin-bottom: 1em;
+        padding-left: 2em;
+        
+        li {
+            margin-bottom: 0.5em;
+        }
+    }
+
+    pre, code {
+        background-color: #f7f7f7;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+        font-size: 0.9em;
+        display: block;
+    }
+
+    blockquote {
+        border-left: 4px solid $accent-color;
+        padding-left: 15px;
+        margin-left: 0;
+        color: #555;
+        font-style: italic;
+    }
+}
+
 
 // Main content
 .main-content {
