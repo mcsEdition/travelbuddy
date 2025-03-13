@@ -4,8 +4,6 @@ title: Legal Notices
 lang: en
 ---
 
-<div class="content-section">
-
 # Legal Notices
 
 *Last Updated: March 1, 2025*
@@ -95,5 +93,3 @@ If you have any questions about these Terms or other legal matters, please conta
 
 - Email: legal@travelbuddy-app.com
 - Mail: TravelBuddy Legal Department, 123 Travel Street, San Francisco, CA 94103, USA
-
-</div>

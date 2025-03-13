@@ -4,8 +4,6 @@ title: Mentions Légales
 lang: fr
 ---
 
-<div class="content-section">
-
 # Mentions Légales
 
 *Dernière mise à jour : 1 mars 2025*
@@ -95,5 +93,3 @@ Si vous avez des questions concernant ces Conditions ou d'autres questions jurid
 
 - Email : legal@travelbuddy-app.com
 - Adresse postale : TravelBuddy Legal Department, 123 Travel Street, San Francisco, CA 94103, USA
-
-</div>
