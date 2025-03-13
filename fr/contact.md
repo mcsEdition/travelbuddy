@@ -4,8 +4,6 @@ title: Contactez-nous
 lang: fr
 ---
 
-<div class="content-section">
-
 # Contactez-nous
 
 Nous sommes là pour vous aider ! Si vous avez des questions, des commentaires ou besoin d'assistance avec TravelBuddy, vous pouvez nous contacter via les canaux suivants :
@@ -113,5 +111,3 @@ Connectez-vous avec nous sur les réseaux sociaux pour les mises à jour, consei
 - [LinkedIn](https://linkedin.com/company/travelbuddy)
 
 Nous sommes impatients de vous aider à créer des connexions significatives lors de vos voyages !
-
-</div>

@@ -626,3 +626,95 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+// Enhanced Form Styling
+.contact-form {
+  margin: 2rem 0;
+  max-width: 100%;
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: $primary-color;
+    }
+    
+    input, 
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      font-family: $font-family;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      
+      &:focus {
+        outline: none;
+        border-color: $accent-color;
+        box-shadow: 0 0 0 3px rgba($accent-color, 0.1);
+      }
+    }
+    
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+  }
+  
+  button[type="submit"] {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+    
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary-color, 0.2);
+    }
+  }
+  
+  // Form validation styling
+  input:invalid,
+  textarea:invalid,
+  select:invalid {
+    &:not(:placeholder-shown) {
+      border-color: #d9534f;
+    }
+  }
+  
+  input:valid,
+  textarea:valid,
+  select:valid {
+    &:not(:placeholder-shown) {
+      border-color: #5cb85c;
+    }
+  }
+}
+
+// Responsive adjustments for the form
+@media (max-width: 768px) {
+  .contact-form {
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    button[type="submit"] {
+      width: 100%;
+      padding: 12px;
+    }
+  }
+}

@@ -4,8 +4,6 @@ title: Aide & Support
 lang: fr
 ---
 
-<div class="content-section">
-
 # Aide & Support
 
 Bienvenue au Centre d'Aide TravelBuddy. Vous trouverez ici des ressources pour tirer le meilleur parti de votre expérience TravelBuddy.
@@ -130,5 +128,3 @@ Samedi - Dimanche : 10h - 18h HNE
 **Temps de Réponse** : Nous nous efforçons de répondre à toutes les demandes dans les 24 heures
 
 Pour les questions urgentes liées à la sécurité du compte ou aux préoccupations de sécurité, veuillez envoyer un email à urgent@travelbuddy-app.com pour une assistance prioritaire.
-
-</div>

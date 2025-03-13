@@ -4,8 +4,6 @@ title: Help & Support
 lang: en
 ---
 
-<div class="content-section">
-
 # Help & Support
 
 Welcome to TravelBuddy Help Center. Here you'll find resources to help you make the most of your TravelBuddy experience.
@@ -130,5 +128,3 @@ Saturday - Sunday: 10 AM - 6 PM EST
 **Response Time**: We aim to respond to all inquiries within 24 hours
 
 For urgent matters related to account security or safety concerns, please email urgent@travelbuddy-app.com for priority assistance.
-
-</div>

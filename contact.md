@@ -4,8 +4,6 @@ title: Contact Us
 lang: en
 ---
 
-<div class="content-section">
-
 # Contact Us
 
 We're here to help! If you have questions, feedback, or need assistance with TravelBuddy, you can reach us through the following channels:
@@ -113,5 +111,3 @@ Connect with us on social media for updates, travel tips, and customer support:
 - [LinkedIn](https://linkedin.com/company/travelbuddy)
 
 We look forward to helping you make meaningful connections on your travels!
-
-</div>
